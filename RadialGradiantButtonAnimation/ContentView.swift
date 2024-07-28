@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var appear = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            CustomButton(
+                text: "Sign In",
+                icon: "apple.logo"
+            )
+            
+            CustomButton(
+                text: "Profile",
+                icon: "person.circle.fill",
+                gradient: [Color.black, Color("myBlue")],
+                width: 130,
+                heigth: 120
+            )
+            
         }
-        .padding()
     }
 }
 
